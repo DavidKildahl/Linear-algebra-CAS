@@ -33,7 +33,7 @@ B = Matrix([[a, b, e],
             [c, d, f]])
 
 # Bemærk her antager SymPy at alle symbolske udtryk i nævnere er forskellige fra 0 
-pprint(B.rref())
+#pprint(B.rref())
 
 # --- Beregn invers matrix ---
 
@@ -41,5 +41,22 @@ A = Matrix([[1, a, b],
             [0, 1, c],
             [0, 0, 1]])
 
-pprint(A.inv())
+#pprint(A.inv())
 
+# --- Nulrum og søjlerum ---
+
+A = Matrix([[2, 4],
+            [1, 2]])
+
+# Beregn udspændende vektorer for nulrummet
+#pprint(A.nullspace())
+
+# Beregn udspændende vektorer for søjlerummet
+#pprint(A.columnspace())
+
+A = Matrix([[1, 2, 3, 1, 1],
+            [2, 3, 4, 3, 2],
+            [3, 4, 5, 5, 4]])
+
+#pprint(A.rref())
+#pprint(A.columnspace())

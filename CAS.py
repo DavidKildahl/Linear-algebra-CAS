@@ -45,8 +45,11 @@ A = Matrix([[1, a, b],
 
 # --- Nulrum og søjlerum ---
 
-A = Matrix([[2, 4],
-            [1, 2]])
+A = Matrix([[0, 6, 6, 3],
+            [1, 2, 1, 1],
+            [4, 1, -3, 4]])
+
+#pprint(A.rref())
 
 # Beregn udspændende vektorer for nulrummet
 #pprint(A.nullspace())
@@ -54,9 +57,5 @@ A = Matrix([[2, 4],
 # Beregn udspændende vektorer for søjlerummet
 #pprint(A.columnspace())
 
-A = Matrix([[1, 2, 3, 1, 1],
-            [2, 3, 4, 3, 2],
-            [3, 4, 5, 5, 4]])
-
-#pprint(A.rref())
-#pprint(A.columnspace())
+# Beregn udspændende vektorer for rækkerummet
+#pprint(A.rowspace())

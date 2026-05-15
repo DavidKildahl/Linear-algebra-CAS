@@ -101,16 +101,36 @@ def gram_schmidt(V, coeff):
 # Eksempel: Opgave 1, eksamen S19
 
 # V matrix med vektorer som søjler
-V = Matrix([[1, 3, 4], [1, 2, 1], [1, 1, 2]])
+V = Matrix([[1, 5, 4], 
+            [0, 1, -1], 
+            [1, 1, 0]])
 
 # Koefficienter til det indre produkt
-coeff = (1, 2, 1)
+coeff = (1, 1, 1)
 
 #pprint(V)
 U, P = gram_schmidt(V, coeff)
 #pprint(U)
 #pprint(P)
 
+# --- Egenværdier ---
+
+A = Matrix([[1, 0, -1], # Eksempel fra aflevering 9
+            [2, 2, 2],
+            [-1, 0, 1]])
+
+#pprint(A)
+
+# Bestem det karakteristiske polynomium, bemærk her det(lambda*I - A), så vi risikerer omvendt fortegn
+pA = A.charpoly()
+#pprint(pA)
+#pprint(factor(pA.as_expr())) # Faktoriser
+
+# Bestem egenværdier med algebraisk multiplicitet
+#pprint(A.eigenvals())
+
+# Bestem basis for egenrum og geometrisk multiplicitet
+#pprint(A.eigenvects())
 
 # --- Integration ---
 
